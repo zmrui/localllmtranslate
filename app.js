@@ -35,7 +35,7 @@ function setStatus(message, isError = false) {
 }
 
 function updateCount() {
-  sourceCount.textContent = `${sourceText.value.length} / 5000`;
+  sourceCount.textContent = `${sourceText.value.length} / 20000`;
 }
 
 function buildPrompt(text, from, to) {
