@@ -3,6 +3,7 @@ const DEFAULT_MODEL = "qwen3-4b";
 
 const apiBaseInput = document.getElementById("api-base");
 const applyApiBtn = document.getElementById("apply-api-btn");
+const setLocalApiBtn = document.getElementById("set-local-api-btn");
 const modelSelect = document.getElementById("model-select");
 const sourceLang = document.getElementById("source-lang");
 const targetLang = document.getElementById("target-lang");
@@ -198,6 +199,10 @@ function swapLanguages() {
 
 sourceText.addEventListener("input", updateCount);
 applyApiBtn.addEventListener("click", applyApiAddress);
+setLocalApiBtn.addEventListener("click", () => {
+  apiBaseInput.value = "http://127.0.0.1:1234";
+  applyApiAddress();
+});
 apiBaseInput.addEventListener("keydown", (event) => {
   if (event.key === "Enter") {
     applyApiAddress();
@@ -210,3 +215,6 @@ swapBtn.addEventListener("click", swapLanguages);
 apiBaseInput.value = normalizeApiBase(apiBaseInput.value);
 updateCount();
 loadModels();
+
+
+

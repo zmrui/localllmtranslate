@@ -92,6 +92,7 @@ body {
   font-size: 0.82rem;
 }
 
+.api-quick-btn,
 .api-apply-btn {
   border: 1px solid var(--line);
   background: #fff;
@@ -263,3 +264,6 @@ textarea[readonly] {
     min-height: 220px;
   }
 }
+
+
+
