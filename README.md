@@ -7,7 +7,7 @@ Google-Translate-style local UI for LM Studio.
 1. Start LM Studio local server at `http://100.119.189.17:1234`.
 2. Load a model in LM Studio.
 3. Open `index.html` in a browser (or serve this folder with a static server).
-4. Choose a model from the **Model** dropdown (default: `qwen3-4b`).
+4. Choose a model from the **Model** dropdown (default: `qwen/qwen3-4b-2507`).
 5. If needed, change **LLM API Address** (for example: `http://100.119.189.17:1234`) and click **Apply API**.
 6. Enter source text and click **Translate**.
 
