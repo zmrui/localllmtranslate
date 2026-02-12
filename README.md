@@ -2,6 +2,8 @@
 
 Google-Translate-style local UI for LM Studio.
 
+[https://localllmtranslate.pages.dev/](https://localllmtranslate.pages.dev/)
+
 ## Run
 
 1. Start LM Studio local server at `http://100.119.189.17:1234`.
