@@ -1,4 +1,4 @@
-const DEFAULT_API_BASE = "http://127.0.0.1:1234";
+const DEFAULT_API_BASE = "http://100.119.189.17:1234";
 const DEFAULT_MODEL = "qwen3-4b";
 
 const apiBaseInput = document.getElementById("api-base");
