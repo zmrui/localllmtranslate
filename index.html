@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Local LLM Translate</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <header class="card-header">
+        <h1>Local LLM Translate</h1>
+        <div class="header-subline">
+          <p>One request. One response. No history.</p>
+          <div class="api-inline" aria-label="API settings">
+            <label for="api-base">API</label>
+            <input id="api-base" type="text" value="http://127.0.0.1:1234" placeholder="http://127.0.0.1:1234">
+            <button id="apply-api-btn" type="button" class="api-apply-btn">Apply</button>
+          </div>
+        </div>
+      </header>
+
+      <section class="controls" aria-label="Translation controls">
+        <label for="model-select" class="field model-field">
+          <span>Model (LM Studio)</span>
+          <select id="model-select">
+            <option value="qwen3-4b" selected>qwen3-4b</option>
+          </select>
+        </label>
+
+        <label for="source-lang" class="field">
+          <span>From</span>
+          <select id="source-lang">
+            <option value="auto">Detect language</option>
+            <option value="English">English</option>
+            <option value="Chinese">Chinese</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Korean">Korean</option>
+            <option value="French">French</option>
+            <option value="German">German</option>
+            <option value="Spanish">Spanish</option>
+            <option value="Russian">Russian</option>
+          </select>
+        </label>
+
+        <button id="swap-btn" type="button" class="swap-btn" aria-label="Swap languages">
+          Swap
+        </button>
+
+        <label for="target-lang" class="field">
+          <span>To</span>
+          <select id="target-lang">
+            <option value="English">English</option>
+            <option value="Chinese" selected>Chinese</option>
+            <option value="Japanese">Japanese</option>
+            <option value="Korean">Korean</option>
+            <option value="French">French</option>
+            <option value="German">German</option>
+            <option value="Spanish">Spanish</option>
+            <option value="Russian">Russian</option>
+          </select>
+        </label>
+      </section>
+
+      <section class="panes">
+        <label class="pane" for="source-text">
+          <span class="pane-title">Source</span>
+          <textarea id="source-text" placeholder="Enter text to translate..." maxlength="5000"></textarea>
+          <div class="pane-footer">
+            <small id="source-count">0 / 5000</small>
+          </div>
+        </label>
+
+        <label class="pane" for="target-text">
+          <span class="pane-title">Translation</span>
+          <textarea id="target-text" placeholder="Translation appears here..." readonly></textarea>
+          <div class="pane-footer">
+            <small id="status-text">Idle</small>
+          </div>
+        </label>
+      </section>
+
+      <footer class="actions">
+        <button id="translate-btn" type="button" class="translate-btn">Translate</button>
+        <button id="clear-btn" type="button" class="clear-btn">Clear</button>
+      </footer>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
